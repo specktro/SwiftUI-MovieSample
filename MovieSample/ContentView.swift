@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  MovieSample
 //
-//  Created by Miguel Angel Gómez Rivero on 07/08/24.
+//  Created by specktro on 07/08/24.
 //
 
 import SwiftUI
