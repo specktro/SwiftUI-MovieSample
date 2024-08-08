@@ -9,38 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Image("wolverine_deadpool")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Release Date: 2024-07-24")
-                        .font(.headline)
-                        .foregroundStyle(.secondary)
-                    
-                    Text("Deadpool & Wolverine")
-                        .font(.title)
-                        .fontWeight(.black)
-                        .foregroundStyle(.primary)
-                        .lineLimit(3)
-                    
-                    Text("Rated B")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-                
-                Spacer()
+        ScrollView {
+            VStack {
+                CardView(image: "wolverine_deadpool", releaseDate: "Release Date: 2024-07-24", title: "Deadpool & Wolverine", rating: "Rated B")
+                CardView(image: "quiet_place", releaseDate: "Release Date: 2024-06-26", title: "A Quiet Place: Day One", rating: "Rated B")
+                CardView(image: "despicable_me", releaseDate: "Release Date: 2024-06-20", title: "Despicable Me 4", rating: "Rated B")
+                CardView(image: "inside_out", releaseDate: "Release Date: 2024-06-11", title: "Inside Out 2", rating: "Rated B")
             }
-            .padding()
         }
-        .cornerRadius(10.0)
-        .overlay {
-            RoundedRectangle(cornerRadius: 10.0)
-                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1.0)
-        }
-        .padding([.top, .horizontal])
     }
 }
 
