@@ -17,7 +17,9 @@ struct CardView: View {
         VStack(alignment: .leading) {
             Image(image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: .infinity, height: 200.0, alignment: .center)
+                .clipped()
             
             HStack {
                 VStack(alignment: .leading) {
@@ -50,5 +52,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(image: "wolverine_deadpool", releaseDate: "Release Date: 2024-07-24", title: "Deadpool & Wolverine", rating: "Rated B")
+    CardView(image: "quiet_place", releaseDate: "Release Date: 2024-06-26", title: "A Quiet Place: Day One", rating: "Rated B")
 }

@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    var movieTitles = ["Deadpool & Wolverine", "A Quiet Place: Day One", "Despicable Me 4", "Inside Out 2", "House of Ga'a", "The Convert", "The Garfield Movie", "No negociable", "Escape from the 21st Century", "Justice League: Crisis on Infinite Earths Part Three", "Descendants: The Rise of Red"]
+    
+    var movieImages = ["wolverine_deadpool", "quiet_place", "despicable_me", "inside_out", "house_of_cha", "the_convert", "garfield", "non_negotiable", "escape_21st_century", "justice_league", "descendants"]
+    
     var body: some View {
-        ScrollView {
-            VStack {
-                CardView(image: "wolverine_deadpool", releaseDate: "Release Date: 2024-07-24", title: "Deadpool & Wolverine", rating: "Rated B")
-                CardView(image: "quiet_place", releaseDate: "Release Date: 2024-06-26", title: "A Quiet Place: Day One", rating: "Rated B")
-                CardView(image: "despicable_me", releaseDate: "Release Date: 2024-06-20", title: "Despicable Me 4", rating: "Rated B")
-                CardView(image: "inside_out", releaseDate: "Release Date: 2024-06-11", title: "Inside Out 2", rating: "Rated B")
+        List {
+            ForEach(movieTitles.indices, id: \.self) { index in
+                SmallCardView(title: movieTitles[index], image: movieImages[index])
             }
         }
+        .listStyle(.plain)
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
