@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+// MARK: SmallCardView
+/// A small view to represent the entire `Movie` information
 struct SmallCardView: View {
+    // MARK: - Properties
     var title: String
     var image: String
     
+    // MARK: - Body
     var body: some View {
         HStack {
             Image(image)
@@ -25,6 +29,7 @@ struct SmallCardView: View {
     }
 }
 
+// MARK: - Previews
 #Preview {
     SmallCardView(title: "Justice League: Crisis on Infinite Earths Part Three", image: "inside_out")
 }

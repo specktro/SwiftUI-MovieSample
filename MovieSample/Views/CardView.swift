@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+// MARK: CardView
+/// A view to represent the entire `Movie` information
 struct CardView: View {
+    // MARK: - Properties
     var image: String
     var releaseDate: String
     var title: String
     var rating: String
     
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
             Image(image)
@@ -51,6 +55,7 @@ struct CardView: View {
     }
 }
 
+// MARK: - Previews
 #Preview {
     CardView(image: "quiet_place", releaseDate: "Release Date: 2024-06-26", title: "A Quiet Place: Day One", rating: "Rated B")
 }
