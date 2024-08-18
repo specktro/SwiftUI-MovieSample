@@ -16,4 +16,5 @@ struct Movie: Identifiable {
     var releaseDate: String
     var title: String
     var rating: String
+    var isFavorite: Bool = false
 }
