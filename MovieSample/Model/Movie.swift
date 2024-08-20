@@ -2,7 +2,7 @@
 //  Movie.swift
 //  MovieSample
 //
-//  Created by Miguel Angel Gómez Rivero on 17/08/24.
+//  Created by specktro on 17/08/24.
 //
 
 import Foundation
