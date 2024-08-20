@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+// MARK: SmallCardView
+/// A small view to represent the entire `Movie` information
 struct SmallCardView: View {
+    // MARK: - Properties
     var title: String
     var image: String
+    @Binding var isFavorite: Bool
     
+    // MARK: - Body
     var body: some View {
         HStack {
             Image(image)
@@ -21,10 +26,14 @@ struct SmallCardView: View {
             Text(title)
                 .font(.headline)
                 .fontWeight(.bold)
+            Spacer()
+            Image(systemName: isFavorite ? "heart.fill" : "heart")
+                .foregroundColor(isFavorite ? .red : .gray)
         }
     }
 }
 
+// MARK: - Previews
 #Preview {
-    SmallCardView(title: "Justice League: Crisis on Infinite Earths Part Three", image: "inside_out")
+    SmallCardView(title: "Justice League: Crisis on Infinite Earths Part Three", image: "inside_out", isFavorite: .constant(true))
 }
